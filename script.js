@@ -1,4 +1,3 @@
-const newBook = document.getElementById('add');
 let myLibrary = [];
 
 function Book(author, title, pages, read){
@@ -11,11 +10,8 @@ function Book(author, title, pages, read){
 // console.log(hobbit.info());
 
 function addBookToLibrary(){
-  // var author = prompt('Enter the book\'s author');
-  // var title = prompt('Enter the book\'s title');
-  // var pages = prompt('Enter the number of pages this book has');
-  // var read = prompt('Have you read this book?');
-  
+  //TODO: create a form to get values for a new book
+  console.log('yeet')
 }
 
 function render(){
