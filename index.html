@@ -6,17 +6,17 @@
   </head>
   <body>
     <button onclick="toggleForm()" id='add'>Click here to add a book to your library</button>
-      <form id='newBook'>Add details of your new book here<br>What's the author's name?<br>
+      <form id='newBook' class='form'>Add details of your new book here<br>What's the author's name?<br>
         <input type='text' id='author'><br>
       What's the book's title?<br>
         <input type='text' id='title'><br>
       How many pages are in this book?<br>
         <input type='text' id='pages'><br>
       Have you read this book?<br>
-        <input type='radio' name='status' id= 'read' checked>Yes
-        <input type='radio' name='status' id='unread'>No
+        <input type='radio' class='choice' name='status' id='read' checked>Yes
+        <input type='radio' class='choice' name='status' id='unread'>No
       </form>
-      <button onclick='addBookToLibrary()'>Submit</button>
+      <button onclick='addBookToLibrary()' class='form'>Submit</button>
     <div id='books'></div>
   </body>
   <script src="script.js"></script>

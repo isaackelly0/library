@@ -10,10 +10,24 @@ function Book(author, title, pages, read){
 // console.log(hobbit.info());
 
 function addBookToLibrary(){
-  //TODO: create a form to get values for a new book
-  console.log('yeet')
+  //TODO: retrieve form to get values for a new book
+  let author = document.getElementById('author').value;
+  let title = document.getElementById('title').value;
+  let pages = document.getElementById('pages').value;
+  let read = document.getElementById('read').checked;
+  let book = new Book(author, title, pages, read);
+  // for(let key in book){
+  //   console.log(key)
+  //   console.log(book[key])
+  // }
+  myLibrary.push(book);
+
 }
 
 function render(){
 
+}
+
+function toggleForm(){
+  
 }
