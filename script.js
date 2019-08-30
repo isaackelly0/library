@@ -21,14 +21,21 @@ function addBookToLibrary(){
   document.getElementById('author').value = '';
   document.getElementById('title').value = '';
   document.getElementById('pages').value = '';
-  //toggleForm();
+  toggleForm();
   render();
 }
 
 function render(){
   // TODO: create visible versions of all books in library on html page
-  //let books = document.querySelectorAll('.book');
-  for(let i = 0; i < myLibrary.length - 1; i++){
+  // first delete the old list
+  let books = document.querySelector('#books');
+  let child = books.lastElementChild;
+  while(child){
+    books.removeChild(child);
+    child = books.lastElementChild;
+  }
+  // refresh with a new list
+  for(let i = 0; i <= myLibrary.length - 1; i++){
     let shelf = document.createElement('li');
     let author = document.createElement('p');
     let title = document.createElement('p');
