@@ -7,7 +7,6 @@ function Book(author, title, pages, read){
   this.read = read;
 }
 // const hobbit = new Book('J.R.R. Tolkein', 'The Hobbit', 295, 'not read yet');
-// console.log(hobbit.info());
 
 function addBookToLibrary(){
   // TODO: retrieve form to get values for a new book
@@ -22,11 +21,41 @@ function addBookToLibrary(){
   document.getElementById('author').value = '';
   document.getElementById('title').value = '';
   document.getElementById('pages').value = '';
-  toggleForm();
+  //toggleForm();
+  render();
 }
 
 function render(){
   // TODO: create visible versions of all books in library on html page
+  //let books = document.querySelectorAll('.book');
+  for(let i = 0; i < myLibrary.length - 1; i++){
+    let shelf = document.createElement('li');
+    let author = document.createElement('p');
+    let title = document.createElement('p');
+    let pages = document.createElement('p');
+    let read = document.createElement('button');
+    let yeet = document.createElement('button');
+    title.innerHTML = myLibrary[i].title;
+    author.innerHTML = "by " + myLibrary[i].author;
+    pages.innerHTML = myLibrary[i].pages + " pages";
+    if(myLibrary[i].read){
+      read.innerHTML = "Read";
+    }
+    else{
+      read.innerHTML = "Unread";
+    }
+    yeet.innerHTML = 'Remove'; //don't judge me, you can't name variables delete or remove, so they get yote instead
+    yeet.classList.add('Remove');
+    //begin appending object traits from the books to the page object
+    shelf.appendChild(title);
+    shelf.appendChild(author);
+    shelf.appendChild(pages);
+    shelf.appendChild(read);
+    shelf.appendChild(yeet);
+    shelf.classList.add('book');
+    shelf.setAttribute('id',i);
+    document.getElementById('books').appendChild(shelf);
+  }
 }
 
 function toggleForm(){
