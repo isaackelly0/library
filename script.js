@@ -1,3 +1,4 @@
+let readList = document.querySelectorAll('.read');
 let myLibrary = [];
 
 function Book(author, title, pages, read){
@@ -47,12 +48,26 @@ function render(){
     pages.innerHTML = myLibrary[i].pages + " pages";
     if(myLibrary[i].read){
       read.innerHTML = "Read";
+      read.classList.add('read');
+      read.addEventListener('click', function(){
+        myLibrary[i].read = false;
+        render();
+      })
     }
     else{
       read.innerHTML = "Unread";
+      read.classList.add('unread');
+      read.addEventListener('click', function(){
+        myLibrary[i].read = true;
+        render();
+      })
     }
     yeet.innerHTML = 'Remove'; //don't judge me, you can't name variables delete or remove, so they get yote instead
     yeet.classList.add('Remove');
+    yeet.addEventListener('click', function(){
+      myLibrary.splice(i, 1);
+      render();
+    })
     //begin appending object traits from the books to the page object
     shelf.appendChild(title);
     shelf.appendChild(author);
