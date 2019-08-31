@@ -46,6 +46,7 @@ function render(){
     title.innerHTML = myLibrary[i].title;
     author.innerHTML = "by " + myLibrary[i].author;
     pages.innerHTML = myLibrary[i].pages + " pages";
+    // change status of read
     if(myLibrary[i].read){
       read.innerHTML = "Read";
       read.classList.add('read');
@@ -62,8 +63,8 @@ function render(){
         render();
       })
     }
+    //remove item from library
     yeet.innerHTML = 'Remove'; //don't judge me, you can't name variables delete or remove, so they get yote instead
-    yeet.classList.add('Remove');
     yeet.addEventListener('click', function(){
       myLibrary.splice(i, 1);
       render();
