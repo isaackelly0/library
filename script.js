@@ -7,7 +7,15 @@ function Book(author, title, pages, read){
   this.pages = pages;
   this.read = read;
 }
-// const hobbit = new Book('J.R.R. Tolkein', 'The Hobbit', 295, 'not read yet');
+// Books inherit a function that changes their read status
+Book.prototype.readCheck = function(){
+  if(this.read){
+    this.read = false;
+  }
+  else{
+    this.read = true;
+  }
+}
 
 function addBookToLibrary(){
   // TODO: retrieve form to get values for a new book
@@ -49,17 +57,15 @@ function render(){
     // change status of read
     if(myLibrary[i].read){
       read.innerHTML = "Read";
-      read.classList.add('read');
       read.addEventListener('click', function(){
-        myLibrary[i].read = false;
+        myLibrary[i].readCheck();
         render();
       })
     }
     else{
       read.innerHTML = "Unread";
-      read.classList.add('unread');
       read.addEventListener('click', function(){
-        myLibrary[i].read = true;
+        myLibrary[i].readCheck();
         render();
       })
     }
