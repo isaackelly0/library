@@ -1,5 +1,9 @@
-#add{
-  horizontal-align: center;
+.form{
+  justify-content: center;
+  background-color: white;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 .invisible{
   visibility: hidden;
@@ -11,11 +15,10 @@
 .book {
   width: 200px;
   border-style: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-color: blue;
   border-radius: 10px;
   margin: 10px;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
 }
