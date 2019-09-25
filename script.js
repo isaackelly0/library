@@ -30,7 +30,6 @@ function addBookToLibrary(){
   document.getElementById('author').value = '';
   document.getElementById('title').value = '';
   document.getElementById('pages').value = '';
-  toggleForm();
   render();
 }
 
@@ -45,7 +44,7 @@ function render(){
   }
   // refresh with a new list
   for(let i = 0; i <= myLibrary.length - 1; i++){
-    let shelf = document.createElement('li');
+    let shelf = document.createElement('div');
     let author = document.createElement('p');
     let title = document.createElement('p');
     let pages = document.createElement('p');
