@@ -4,19 +4,25 @@
     <title>Your Own Library!</title>
     <link rel='stylesheet' type='text/css' href='style.css'/>
   </head>
-  <body>
-    <button onclick="toggleForm()" id='add'>Click here to add a book to your library</button>
-      <form id='newBook' class='form'>Add details of your new book here<br>What's the author's name?<br>
+  <body background='https://i.pinimg.com/originals/af/f4/33/aff433d88da49ffeefd4c6598323cc79.jpg'>
+    <center>
+        <button onclick="toggleForm()" id='add'>Click here to add a book to your library</button>
+      </center>
+        <center>
+        <div class='form'>
+        <form id='newBook' class='form'>Add details of your new book here<br>What's the author's name?<br>
         <input type='text' id='author'><br>
-      What's the book's title?<br>
+          What's the book's title?<br>
         <input type='text' id='title'><br>
-      How many pages are in this book?<br>
+          How many pages are in this book?<br>
         <input type='text' id='pages'><br>
-      Have you read this book?<br>
+          Have you read this book?<br>
         <input type='radio' class='choice' name='status' id='read' checked>Yes
         <input type='radio' class='choice' name='status' id='unread'>No
       </form>
       <button onclick='addBookToLibrary()' class='form'>Submit</button>
+    </div>
+    </center>
     <div id='books'></div>
   </body>
   <script src="script.js"></script>
