@@ -9,16 +9,33 @@
   visibility: hidden;
 }
 .books {
-  display: grid;
+  display: block;
   justify-content: space-between;
 }
 .book {
-  width: 200px;
+  width: 97%;
   border-style: hidden;
   border-radius: 10px;
   margin: 10px;
-  text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: white;
+  display:inline-flex;
+}
+.bookTitle{
+  padding-left: 10px;
+}
+.bookAuthor {
+  padding-left: 500px;
+}
+.bookPages {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+.bookRead {
+  /*padding-left: 300px;*/
+  margin-left: 200px;
+}
+.yeet {
+  /*padding-left: 300px;*/
 }
