@@ -98,6 +98,3 @@ function toggleForm(){
     e.classList.toggle('invisible');
   })
 }
-let hobbit = new Book('J.R.R. Tolkein', 'The Hobbit', '250', true);
-myLibrary.push(hobbit);
-render();
