@@ -21,6 +21,7 @@
   padding-bottom: 15px;
   background-color: white;
   display:inline-flex;
+
 }
 .bookTitle{
   padding-left: 10px;
@@ -30,12 +31,14 @@
 }
 .bookPages {
   padding-left: 300px;
-  padding-right: 300px;
 }
 .bookRead {
-  /*padding-left: 300px;*/
-  margin-left: 200px;
+  position: fixed;
+  left: 1400px;
+  margin-top: 10px;
 }
 .yeet {
-  /*padding-left: 300px;*/
+  position: fixed;
+  left: 1700px;
+  margin-top: 10px;
 }
