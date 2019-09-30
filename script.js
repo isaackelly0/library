@@ -46,10 +46,15 @@ function render(){
   for(let i = 0; i <= myLibrary.length - 1; i++){
     let shelf = document.createElement('div');
     let author = document.createElement('p');
+    author.classList.add('bookAuthor');
     let title = document.createElement('p');
+    title.classList.add('bookTitle');
     let pages = document.createElement('p');
+    pages.classList.add('bookPages');
     let read = document.createElement('button');
+    read.classList.add('bookRead');
     let yeet = document.createElement('button');
+    yeet.classList.add('yeet');
     title.innerHTML = myLibrary[i].title;
     author.innerHTML = "by " + myLibrary[i].author;
     pages.innerHTML = myLibrary[i].pages + " pages";
@@ -93,3 +98,6 @@ function toggleForm(){
     e.classList.toggle('invisible');
   })
 }
+let hobbit = new Book('J.R.R. Tolkein', 'The Hobbit', '250', true);
+myLibrary.push(hobbit);
+render();
