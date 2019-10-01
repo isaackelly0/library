@@ -36,10 +36,18 @@
 .bookRead {
   position: fixed;
   left: 1400px;
-  margin-top: 10px;
+  margin-top: 15px;
+  background-color: #3f000f;
+  color: gold;
+  border-color: gold;
+  border-radius: 5px;
 }
 .yeet {
   position: fixed;
   left: 1700px;
-  margin-top: 10px;
+  margin-top: 15px;
+  background-color: #3f000f;
+  color: gold;
+  border-color: gold;
+  border-radius: 5px;
 }
