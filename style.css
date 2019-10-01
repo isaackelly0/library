@@ -14,14 +14,15 @@
 }
 .book {
   width: 97%;
-  border-style: hidden;
+  border-style: solid;
+  border-color: gold;
   border-radius: 10px;
   margin: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: white;
+  background-color: #654321;
   display:inline-flex;
-
+  color: gold;
 }
 .bookTitle{
   padding-left: 10px;
