@@ -9,8 +9,8 @@
         <button onclick="toggleForm()" id='add'>Click here to add a book to your library</button>
       </center>
         <center>
-        <div class='form'>
-        <form id='newBook' class='form'>Add details of your new book here<br>What's the author's name?<br>
+        <div class='form invisible'>
+        <form id='newBook' class='form invisible'>Add details of your new book here<br>What's the author's name?<br>
         <input type='text' id='author'><br>
           What's the book's title?<br>
         <input type='text' id='title'><br>
@@ -20,7 +20,7 @@
         <input type='radio' class='choice' name='status' id='read' checked>Yes
         <input type='radio' class='choice' name='status' id='unread'>No
       </form>
-      <button onclick='addBookToLibrary()' class='form'>Submit</button>
+      <button onclick='addBookToLibrary()' class='form invisible'>Submit</button>
     </div>
     </center>
     <div id='books'></div>
